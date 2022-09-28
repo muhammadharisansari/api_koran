@@ -74,6 +74,9 @@
                     <span> Laporan</span></a>
             </li>
 
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
         </ul>
         <!-- End of Sidebar -->
 
