@@ -1,0 +1,39 @@
+- Tabel Koran  
+- URL default : http://localhost/api_koran/public/...
+
+- GET (all)
+- http://192.168.100.5:8080/koran
+
+- GET (detail)
+- http://192.168.100.5:8080/koran/1
+
+- POST
+- http://192.168.100.5:8080/koran
+- field required : koran, created_at
+
+- UPDATE
+- http://192.168.100.5:8080/koran/1
+- field required : koran, created_at
+
+- DELETE
+- http://192.168.100.5:8080/koran/1
+
+
+- Tabel Setoran
+
+- GET (all)
+- http://localhost/api_koran/public/setoran
+
+- GET (detail)
+- http://localhost/api_koran/public/setoran/1
+
+- POST 
+- http://localhost/api_koran/public/setoran
+- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+
+- UPDATE
+- http://localhost/api_koran/public/setoran/1
+- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+
+- DELETE
+- - http://localhost/api_koran/public/setoran/1
