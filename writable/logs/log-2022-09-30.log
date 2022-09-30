@@ -1,0 +1,135 @@
+CRITICAL - 2022-09-30 14:15:37 --> Undefined variable: session
+in APPPATH\Views\koranWeb_view.php on line 9.
+ 1 APPPATH\Views\koranWeb_view.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\koranWeb_view.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:17:04 --> Undefined variable: session
+in APPPATH\Views\koranWeb_view.php on line 8.
+ 1 APPPATH\Views\koranWeb_view.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\koranWeb_view.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:18:43 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\koranWeb_view.php on line 8.
+ 1 APPPATH\Views\koranWeb_view.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\koranWeb_view.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 01:22:35 --> Undefined property: App\Controllers\KoranWeb::$load
+in APPPATH\Controllers\KoranWeb.php on line 18.
+ 1 APPPATH\Controllers\KoranWeb.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\KoranWeb::$load', 'APPPATH\\Controllers\\KoranWeb.php', 18, [])
+ 2 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\KoranWeb->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 01:30:25 --> Undefined property: App\Controllers\KoranWeb::$load
+in APPPATH\Controllers\KoranWeb.php on line 18.
+ 1 APPPATH\Controllers\KoranWeb.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\KoranWeb::$load', 'APPPATH\\Controllers\\KoranWeb.php', 18, [])
+ 2 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\KoranWeb->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:32:59 --> Undefined variable: data
+in APPPATH\Controllers\KoranWeb.php on line 60.
+ 1 APPPATH\Controllers\KoranWeb.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\KoranWeb.php', 60, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->create()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:35:10 --> Undefined property: App\Controllers\KoranWeb::$session
+in APPPATH\Controllers\KoranWeb.php on line 56.
+ 1 APPPATH\Controllers\KoranWeb.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\KoranWeb::$session', 'APPPATH\\Controllers\\KoranWeb.php', 56, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->create()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:44:48 --> Trying to get property 'errno' of non-object
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 555.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(555): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'errno\' of non-object', 'SYSTEMPATH\\Database\\MySQLi\\Connection.php', 555, [])
+ 2 SYSTEMPATH\Model.php(452): CodeIgniter\Database\MySQLi\Connection->error()
+ 3 SYSTEMPATH\BaseModel.php(1059): CodeIgniter\Model->doErrors()
+ 4 APPPATH\Controllers\KoranWeb.php(53): CodeIgniter\BaseModel->errors()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->create()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:50:22 --> Undefined variable: validation
+in APPPATH\Views\koranWeb_view.php on line 14.
+ 1 APPPATH\Views\koranWeb_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'APPPATH\\Views\\koranWeb_view.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 14:55:47 --> Undefined variable: validation
+in APPPATH\Views\koranWeb_view.php on line 14.
+ 1 APPPATH\Views\koranWeb_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'APPPATH\\Views\\koranWeb_view.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 15:02:03 --> Undefined variable: data
+in APPPATH\Controllers\KoranWeb.php on line 59.
+ 1 APPPATH\Controllers\KoranWeb.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Controllers\\KoranWeb.php', 59, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->create()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 15:09:29 --> Array to string conversion
+in APPPATH\Views\koranWeb_view.php on line 14.
+ 1 APPPATH\Views\koranWeb_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\koranWeb_view.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-30 15:14:52 --> Array to string conversion
+in APPPATH\Views\koranWeb_view.php on line 14.
+ 1 APPPATH\Views\koranWeb_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\koranWeb_view.php', 14, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\koranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('koranWeb_view', [], true)
+ 5 APPPATH\Controllers\KoranWeb.php(27): view('koranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\KoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

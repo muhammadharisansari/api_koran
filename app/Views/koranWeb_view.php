@@ -4,6 +4,18 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Daftar Mitra Koran</h1>
     </div>
+
+    <?php if (session()->getFlashData('pesan')) { ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashData('pesan');  ?>
+        </div>
+    <?php } elseif (session()->getFlashData('error')) { ?>
+        <div class="alert alert-danger" role="alert">
+            Gagal diproses :
+            <?= session()->getFlashData('error');  ?>
+        </div>
+
+    <?php }  ?>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

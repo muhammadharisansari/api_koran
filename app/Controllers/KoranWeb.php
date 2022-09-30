@@ -12,10 +12,10 @@ class KoranWeb extends BaseController
 
 
 
+
     function __construct()
     {
         $this->model = new ModelKoran();
-
         date_default_timezone_set("Asia/makassar");
     }
 
@@ -30,13 +30,33 @@ class KoranWeb extends BaseController
 
     public function create()
     {
+        $validation =  \Config\Services::validation();
+        $coba = $validation->setRules(
+            [
+                'nama_mitra' => 'required',
+            ],
+            [   // Errors
+                'nama_mitra' => [
+                    'required' => 'Form koran harus diisi',
+                ],
+            ]
+        );
+        $isDataValid = $validation->withRequest($this->request)->run();
 
-        $data['koran'] = $this->request->getPost('nama_mitra');
-        $data['created_at'] = date('Y-m-d H:i:s');
-        $data['updated_at'] = '0000-00-00 00:00:00';
+        if ($isDataValid) {
+            $data = [
+                'koran' => $this->request->getPost('nama_mitra'),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => '0000-00-00 00:00:00'
+            ];
+
+            $this->model->save($data);
+
+            session()->setFlashData('pesan', 'Data berhasil disimpan');
+        } else {
+            session()->setFlashData('error', $validation->listErrors());
+        }
         // dd($data);
-
-        if (!$this->model->save($data)) return $this->fail($this->model->errors());
         return redirect('koranweb');
     }
 
@@ -59,10 +79,11 @@ class KoranWeb extends BaseController
     {
         $data = $this->model->where('id_koran', $id)->findAll();
         if (!$data) {
-            return $this->failNotFound("Data dengan id : $id tidak ditemukan");
+            session()->setFlashData('error', 'ID tidak ditemukan');
         }
 
         $this->model->delete($id);
+        session()->setFlashData('pesan', 'Data berhasil dihapus');
 
         return redirect('koranweb');
     }
