@@ -31,7 +31,7 @@ class KoranWeb extends BaseController
     public function create()
     {
         $validation =  \Config\Services::validation();
-        $coba = $validation->setRules(
+        $validation->setRules(
             [
                 'nama_mitra' => 'required',
             ],
@@ -62,13 +62,36 @@ class KoranWeb extends BaseController
 
     public function update($id)
     {
-        $data['koran'] = $this->request->getPost('nama_mitra');
+        $validation =  \Config\Services::validation();
+        $validation->setRules(
+            [
+                'nama_mitra' => 'required',
+            ],
+            [   // Errors
+                'nama_mitra' => [
+                    'required' => 'Form koran harus diisi',
+                ],
+            ]
+        );
+        $isDataValid = $validation->withRequest($this->request)->run();
 
-        $data['id_koran'] = $id;
-        // dd($data);
-        $isExist = $this->model->where('id_koran', $id)->findAll();
-        if ($isExist) {
-            if (!$this->model->save($data)) return $this->fail($this->model->errors());
+        if ($isDataValid) {
+            $data = [
+                'koran' => $this->request->getPost('nama_mitra'),
+                'updated_at' => date('Y-m-d H:i:s'),
+
+                'id_koran' => $id
+            ];
+            // dd($data);
+            $isExist = $this->model->where('id_koran', $id)->findAll();
+            if ($isExist) {
+                $this->model->save($data);
+                session()->setFlashData('pesan', 'Data berhasil diperbaharui');
+            } else {
+                session()->setFlashData('error', 'Data tidak ditemukan');
+            }
+        } else {
+            session()->setFlashData('error', $validation->listErrors());
         }
 
 

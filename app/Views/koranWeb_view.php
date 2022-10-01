@@ -6,13 +6,19 @@
     </div>
 
     <?php if (session()->getFlashData('pesan')) { ?>
-        <div class="alert alert-success" role="alert">
-            <?= session()->getFlashData('pesan');  ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Sukses!</strong> <?= session()->getFlashData('pesan');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     <?php } elseif (session()->getFlashData('error')) { ?>
-        <div class="alert alert-danger" role="alert">
-            Gagal diproses :
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Gagal diproses :</strong>
             <?= session()->getFlashData('error');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
 
     <?php }  ?>
