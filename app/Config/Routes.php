@@ -40,6 +40,7 @@ $routes->resource('setoran');
 $routes->resource('koran');
 
 $routes->get('/koranweb', 'KoranWeb::index');
+$routes->get('/laporan', 'Laporan::index');
 $routes->add('/koranweb/create', 'KoranWeb::create');
 $routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1');
 $routes->post('/koranweb/delete/(:any)', 'KoranWeb::delete/$1');
