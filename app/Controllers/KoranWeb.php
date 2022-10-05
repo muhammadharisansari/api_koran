@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\API\ResponseTrait;
+// use CodeIgniter\API\ResponseTrait;
 
 use App\Models\ModelKoran;
 
 class KoranWeb extends BaseController
 {
-    use ResponseTrait;
+    // use ResponseTrait;
 
 
 
@@ -31,7 +31,7 @@ class KoranWeb extends BaseController
     public function create()
     {
         $validation =  \Config\Services::validation();
-        $coba = $validation->setRules(
+        $validation->setRules(
             [
                 'nama_mitra' => 'required',
             ],
@@ -62,15 +62,35 @@ class KoranWeb extends BaseController
 
     public function update($id)
     {
-        $data['koran'] = $this->request->getPost('nama_mitra');
+        $validation =  \Config\Services::validation();
+        $validation->setRules(
+            [
+                'nama_mitra' => 'required',
+            ],
+            [   // Errors
+                'nama_mitra' => [
+                    'required' => 'Form koran harus diisi',
+                ],
+            ]
+        );
+        $isDataValid = $validation->withRequest($this->request)->run();
 
-        $data['id_koran'] = $id;
-        // dd($data);
-        $isExist = $this->model->where('id_koran', $id)->findAll();
-        if ($isExist) {
-            if (!$this->model->save($data)) return $this->fail($this->model->errors());
+        if ($isDataValid) {
+            $isExist = $this->model->where('id_koran', $id)->findAll();
+            $data = [
+                'koran' => $this->request->getPost('nama_mitra'),
+                'updated_at' => date('Y-m-d H:i:s')
+            ];
+            // dd($data);
+            if ($isExist) {
+                $this->model->update($id, $data);
+                session()->setFlashData('pesan', 'Data berhasil diperbarui');
+            } else {
+                session()->setFlashData('error', 'ID tidak ditemukan');
+            }
+        } else {
+            session()->setFlashData('error', $validation->listErrors());
         }
-
 
         return redirect('koranweb');
     }
