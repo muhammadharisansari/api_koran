@@ -1,10 +1,37 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Daftar Transaksi Koran</h1>
+    </div>
+
+    <?php if (session()->getFlashData('pesan')) { ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Sukses!</strong> <?= session()->getFlashData('pesan');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php } elseif (session()->getFlashData('error')) { ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Gagal diproses :</strong>
+            <?= session()->getFlashData('error');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+    <?php }  ?>
+
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Daftar Setoran Koran</h6>
+
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah">
+                Tambah data
+            </button>
+
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -47,7 +74,7 @@
                                                         <i class="bi bi-pencil fa-sm fa-fw mr-2 text-gray-400"></i>
                                                         Edit
                                                     </a>
-                                                    <a class="dropdown-item" href="#">
+                                                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal<?= $s['id']; ?>">
                                                         <i class="bi bi-trash fa-sm fa-fw mr-2 text-gray-400"></i>
                                                         Hapus
                                                     </a>
@@ -66,3 +93,76 @@
 
 </div>
 <!-- /.container-fluid -->
+
+<!-- Modal tambah-->
+<div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= base_url(); ?>/setoranweb/create" method="post">
+                    <div class="form-group">
+                        <label>Mitraz</label>
+                        <select class="custom-select" name="nama_mitra">
+                            <option selected disabled>--Pilih Mitra--</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Bulan</label>
+                        <select class="custom-select" name="bulan">
+                            <option selected disabled>--Pilih Bulan--</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal</label>
+                        <input type="date" class="form-control" name="tanggal">
+                    </div>
+                    <div class="form-group">
+                        <label>Jumlah</label>
+                        <input type="number" class="form-control" name="jumlah">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                <button type="submit" class="btn btn-success">Tambah</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal hapus-->
+<?php foreach ($setoran as $s) : ?>
+    <div class="modal fade" id="exampleModal<?= $s['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form action="<?= base_url() . '/koranweb/delete/' . $s['id']; ?>" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Hapus data </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Yakin ingin menghapus transaksi <?= $s['nama_koran']; ?> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                        <button type="submit" class="btn btn-danger">Hapus</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php endforeach; ?>

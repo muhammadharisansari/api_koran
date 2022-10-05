@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url(); ?>/assets/index.html">
+                <a class="nav-link" href="<?= base_url(); ?>">
                     <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
                     <span>Dashboard</span>
                 </a>
