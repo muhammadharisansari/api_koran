@@ -1,0 +1,12 @@
+CRITICAL - 2022-10-06 01:27:29 --> Undefined index: koran
+in APPPATH\Views\setoranWeb_view.php on line 114.
+ 1 APPPATH\Views\setoranWeb_view.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Views\\setoranWeb_view.php', 114, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\setoranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('setoranWeb_view', [], true)
+ 5 APPPATH\Controllers\SetoranWeb.php(26): view('setoranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\SetoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

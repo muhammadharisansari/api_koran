@@ -46,6 +46,9 @@ $routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1');
 $routes->post('/koranweb/delete/(:any)', 'KoranWeb::delete/$1');
 
 $routes->get('/setoranweb', 'SetoranWeb::index');
+$routes->add('/setoranweb/create', 'setoranWeb::create');
+$routes->post('/setoranweb/update/(:any)', 'setoranWeb::update/$1');
+$routes->post('/setoranweb/delete/(:any)', 'setoranWeb::delete/$1');
 
 /*
  * --------------------------------------------------------------------
