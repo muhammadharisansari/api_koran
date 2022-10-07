@@ -71,28 +71,32 @@ class Laporan extends BaseController
         $spreadsheet = new Spreadsheet();
         // tulis header/nama kolom 
         $spreadsheet->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Nama Koran')
-            ->setCellValue('B1', 'Bulan')
-            ->setCellValue('C1', 'Tanggal')
-            ->setCellValue('D1', 'Jumlah')
-            ->setCellValue('E1', 'Dibuat')
-            ->setCellValue('F1', 'Diperbarui');
+            ->setCellValue('A1', 'Dibuat')
+            ->setCellValue('B1', 'Diperbarui')
+            ->setCellValue('C1', 'Nama Koran')
+            ->setCellValue('D1', 'Bulan')
+            ->setCellValue('E1', 'Tanggal')
+            ->setCellValue('F1', 'Jumlah');
 
         $column = 2;
+        $total = 0;
         // tulis data mobil ke cell
         foreach ($dataKoran as $data) {
             $spreadsheet->setActiveSheetIndex(0)
-                ->setCellValue('A' . $column, $data['nama_koran'])
-                ->setCellValue('B' . $column, $data['bulan'])
-                ->setCellValue('C' . $column, $data['tanggal'])
-                ->setCellValue('D' . $column, $data['jumlah'])
-                ->setCellValue('E' . $column, $data['created_at'])
-                ->setCellValue('F' . $column, $data['updated_at']);
+                ->setCellValue('A' . $column, $data['created_at'])
+                ->setCellValue('B' . $column, $data['updated_at'])
+                ->setCellValue('C' . $column, $data['nama_koran'])
+                ->setCellValue('D' . $column, $data['bulan'])
+                ->setCellValue('E' . $column, $data['tanggal'])
+                ->setCellValue('F' . $column, $data['jumlah']);
+            $total = $total + $data['jumlah'];
             $column++;
         }
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E' . $column, "Total");
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F' . $column, $total);
         // tulis dalam format .xlsx
         $writer = new Xlsx($spreadsheet);
-        $fileName = 'Setoran Koran '. $start_date.' s/d '.$end_date;
+        $fileName = 'Setoran Koran ' . $start_date . ' s/d ' . $end_date;
 
         // Redirect hasil generate xlsx ke web client
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

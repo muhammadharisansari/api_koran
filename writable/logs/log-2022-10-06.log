@@ -50,3 +50,19 @@ in APPPATH\Controllers\Laporan.php on line 82.
  4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 21:16:33 --> Undefined property: App\Controllers\Laporan::$activeSheet
+in APPPATH\Controllers\Laporan.php on line 93.
+ 1 APPPATH\Controllers\Laporan.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Laporan::$activeSheet', 'APPPATH\\Controllers\\Laporan.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 21:17:56 --> Undefined property: PhpOffice\PhpSpreadsheet\Spreadsheet::$setActiveSheet
+in APPPATH\Controllers\Laporan.php on line 93.
+ 1 APPPATH\Controllers\Laporan.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: PhpOffice\\PhpSpreadsheet\\Spreadsheet::$setActiveSheet', 'APPPATH\\Controllers\\Laporan.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
