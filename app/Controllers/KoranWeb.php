@@ -2,16 +2,10 @@
 
 namespace App\Controllers;
 
-// use CodeIgniter\API\ResponseTrait;
-
 use App\Models\ModelKoran;
 
 class KoranWeb extends BaseController
 {
-    // use ResponseTrait;
-
-
-
 
     function __construct()
     {

@@ -70,14 +70,14 @@
                                                 </a>
                                                 <!-- Dropdown - User Information -->
                                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                                    <a class="dropdown-item" href="#">
+                                                    <button class="dropdown-item" data-toggle="modal" data-target="#edit<?= $s['id']; ?>">
                                                         <i class="bi bi-pencil fa-sm fa-fw mr-2 text-gray-400"></i>
                                                         Edit
-                                                    </a>
-                                                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal<?= $s['id']; ?>">
+                                                    </button>
+                                                    <button class="dropdown-item" data-toggle="modal" data-target="#hapus<?= $s['id']; ?>">
                                                         <i class="bi bi-trash fa-sm fa-fw mr-2 text-gray-400"></i>
                                                         Hapus
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </li>
                                         </ul>
@@ -107,21 +107,12 @@
             <div class="modal-body">
                 <form action="<?= base_url(); ?>/setoranweb/create" method="post">
                     <div class="form-group">
-                        <label>Mitraz</label>
+                        <label>Mitra</label>
                         <select class="custom-select" name="nama_mitra">
                             <option selected disabled>--Pilih Mitra--</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Bulan</label>
-                        <select class="custom-select" name="bulan">
-                            <option selected disabled>--Pilih Bulan--</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <?php foreach ($koran as $k) : ?>
+                                <option value="<?= $k['koran']; ?>"><?= $k['koran']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group">
@@ -142,11 +133,52 @@
     </div>
 </div>
 
+<!-- Modal update-->
+<?php foreach ($setoran as $s) : ?>
+    <div class="modal fade" id="edit<?= $s['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?= base_url("/setoranweb/update/" . $s['id']); ?>" method="post">
+                        <div class="form-group">
+                            <label>Mitra</label>
+                            <select class="custom-select" name="nama_mitra">
+                                <option selected hidden><?= $s['nama_koran']; ?></option>
+                                <?php foreach ($koran as $k) : ?>
+                                    <option value="<?= $k['koran']; ?>"><?= $k['koran']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control" name="tanggal" value="<?= $s['tanggal']; ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Jumlah</label>
+                            <input type="number" class="form-control" name="jumlah" value="<?= $s['jumlah']; ?>">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                    <button type="submit" class="btn btn-success">Edit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
 <!-- Modal hapus-->
 <?php foreach ($setoran as $s) : ?>
-    <div class="modal fade" id="exampleModal<?= $s['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="hapus<?= $s['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <form action="<?= base_url() . '/koranweb/delete/' . $s['id']; ?>" method="post">
+            <form action="<?= base_url() . '/setoranweb/delete/' . $s['id']; ?>" method="post">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Hapus data </h5>

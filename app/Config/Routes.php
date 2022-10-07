@@ -40,13 +40,18 @@ $routes->resource('setoran');
 $routes->resource('koran');
 
 $routes->get('/koranweb', 'KoranWeb::index');
-$routes->get('/laporan', 'Laporan::index');
 $routes->add('/koranweb/create', 'KoranWeb::create');
 $routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1');
 $routes->post('/koranweb/delete/(:any)', 'KoranWeb::delete/$1');
 
 $routes->get('/setoranweb', 'SetoranWeb::index');
+$routes->add('/setoranweb/create', 'setoranWeb::create');
+$routes->post('/setoranweb/update/(:any)', 'setoranWeb::update/$1');
+$routes->post('/setoranweb/delete/(:any)', 'setoranWeb::delete/$1');
 
+$routes->get('/laporan', 'Laporan::index');
+$routes->get('/laporan/koranexcel', 'Laporan::koranexcel');
+$routes->add('/laporan/setoranexcel', 'Laporan::setoranexcel');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

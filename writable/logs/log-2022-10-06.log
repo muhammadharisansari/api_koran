@@ -1,0 +1,68 @@
+CRITICAL - 2022-10-06 01:27:29 --> Undefined index: koran
+in APPPATH\Views\setoranWeb_view.php on line 114.
+ 1 APPPATH\Views\setoranWeb_view.php(114): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Views\\setoranWeb_view.php', 114, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\setoranWeb_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('setoranWeb_view', [], true)
+ 5 APPPATH\Controllers\SetoranWeb.php(26): view('setoranWeb_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\SetoranWeb->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetoranWeb))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 19:23:05 --> Undefined property: App\Controllers\SetoranWeb::$load
+in APPPATH\Controllers\SetoranWeb.php on line 20.
+ 1 APPPATH\Controllers\SetoranWeb.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\SetoranWeb::$load', 'APPPATH\\Controllers\\SetoranWeb.php', 20, [])
+ 2 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\SetoranWeb->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 19:25:48 --> Undefined property: App\Controllers\SetoranWeb::$load
+in APPPATH\Controllers\SetoranWeb.php on line 81.
+ 1 APPPATH\Controllers\SetoranWeb.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\SetoranWeb::$load', 'APPPATH\\Controllers\\SetoranWeb.php', 81, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\SetoranWeb->update('12')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetoranWeb))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 19:30:43 --> Undefined property: App\Controllers\SetoranWeb::$load
+in APPPATH\Controllers\SetoranWeb.php on line 81.
+ 1 APPPATH\Controllers\SetoranWeb.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\SetoranWeb::$load', 'APPPATH\\Controllers\\SetoranWeb.php', 81, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\SetoranWeb->update('12')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SetoranWeb))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 20:12:17 --> Undefined index: updated_ad
+in APPPATH\Controllers\Laporan.php on line 49.
+ 1 APPPATH\Controllers\Laporan.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: updated_ad', 'APPPATH\\Controllers\\Laporan.php', 49, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->koranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 20:32:41 --> Undefined index: koran
+in APPPATH\Controllers\Laporan.php on line 82.
+ 1 APPPATH\Controllers\Laporan.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Controllers\\Laporan.php', 82, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 21:16:33 --> Undefined property: App\Controllers\Laporan::$activeSheet
+in APPPATH\Controllers\Laporan.php on line 93.
+ 1 APPPATH\Controllers\Laporan.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Laporan::$activeSheet', 'APPPATH\\Controllers\\Laporan.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-06 21:17:56 --> Undefined property: PhpOffice\PhpSpreadsheet\Spreadsheet::$setActiveSheet
+in APPPATH\Controllers\Laporan.php on line 93.
+ 1 APPPATH\Controllers\Laporan.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: PhpOffice\\PhpSpreadsheet\\Spreadsheet::$setActiveSheet', 'APPPATH\\Controllers\\Laporan.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
