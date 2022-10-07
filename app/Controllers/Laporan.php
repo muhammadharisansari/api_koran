@@ -7,6 +7,7 @@ use App\Models\ModelSetoran;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 
 class Laporan extends BaseController
 {
@@ -34,21 +35,33 @@ class Laporan extends BaseController
         $dataKoran = $this->model->findAll();
 
         $spreadsheet = new Spreadsheet();
+        $no = 1;
         // tulis header/nama kolom 
         $spreadsheet->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Nama Mitra')
-            ->setCellValue('B1', 'Dibuat')
-            ->setCellValue('C1', 'Diperbarui');
+            ->setCellValue('A1', 'No')
+            ->setCellValue('B1', 'Nama Mitra')
+            ->setCellValue('C1', 'Dibuat')
+            ->setCellValue('D1', 'Diperbarui');
 
         $column = 2;
         // tulis data mobil ke cell
         foreach ($dataKoran as $data) {
             $spreadsheet->setActiveSheetIndex(0)
-                ->setCellValue('A' . $column, $data['koran'])
-                ->setCellValue('B' . $column, $data['created_at'])
-                ->setCellValue('C' . $column, $data['updated_at']);
+                ->setCellValue('A' . $column, $no)
+                ->setCellValue('B' . $column, $data['koran'])
+                ->setCellValue('C' . $column, $data['created_at'])
+                ->setCellValue('D' . $column, $data['updated_at']);
             $column++;
+            $no++;
         }
+
+        $spreadsheet
+            ->getActiveSheet()
+            ->getStyle('A1:D' . ($column - 1))
+            ->getBorders()
+            ->getAllBorders()
+            ->setBorderStyle(Border::BORDER_THICK);
+
         // tulis dalam format .xlsx
         $writer = new Xlsx($spreadsheet);
         $fileName = 'Data Mitra Koran';
@@ -69,34 +82,50 @@ class Laporan extends BaseController
         $dataKoran = $this->setoran->where('tanggal BETWEEN "' . date('Y-m-d', strtotime($start_date)) . '" and "' . date('Y-m-d', strtotime($end_date)) . '"')->findAll();
 
         $spreadsheet = new Spreadsheet();
+
         // tulis header/nama kolom 
         $spreadsheet->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Dibuat')
-            ->setCellValue('B1', 'Diperbarui')
-            ->setCellValue('C1', 'Nama Koran')
-            ->setCellValue('D1', 'Bulan')
-            ->setCellValue('E1', 'Tanggal')
-            ->setCellValue('F1', 'Jumlah');
+            ->setCellValue('A1', 'No')
+            ->setCellValue('B1', 'Dibuat')
+            ->setCellValue('C1', 'Diperbarui')
+            ->setCellValue('D1', 'Nama Koran')
+            ->setCellValue('E1', 'Bulan')
+            ->setCellValue('F1', 'Tanggal')
+            ->setCellValue('G1', 'Jumlah');
 
         $column = 2;
         $total = 0;
+        $no = 1;
         // tulis data mobil ke cell
         foreach ($dataKoran as $data) {
             $spreadsheet->setActiveSheetIndex(0)
-                ->setCellValue('A' . $column, $data['created_at'])
-                ->setCellValue('B' . $column, $data['updated_at'])
-                ->setCellValue('C' . $column, $data['nama_koran'])
-                ->setCellValue('D' . $column, $data['bulan'])
-                ->setCellValue('E' . $column, $data['tanggal'])
-                ->setCellValue('F' . $column, $data['jumlah']);
+                ->setCellValue('A' . $column, $no)
+                ->setCellValue('B' . $column, $data['created_at'])
+                ->setCellValue('C' . $column, $data['updated_at'])
+                ->setCellValue('D' . $column, $data['nama_koran'])
+                ->setCellValue('E' . $column, $data['bulan'])
+                ->setCellValue('F' . $column, $data['tanggal'])
+                ->setCellValue('G' . $column, $data['jumlah']);
             $total = $total + $data['jumlah'];
             $column++;
+            $no++;
         }
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E' . $column, "Total");
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F' . $column, $total);
+        $spreadsheet->setActiveSheetIndex(0)->mergeCells('A' . $column . ':' . 'F' . $column)->setCellValue('A' . $column, "Total");
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('G' . $column, $total);
+
+        $spreadsheet
+            ->getActiveSheet()
+            ->getStyle('A1:G' . $column)
+            ->getBorders()
+            ->getAllBorders()
+            ->setBorderStyle(Border::BORDER_THICK);
+
+        $spreadsheet->getActiveSheet()->getStyle('A' . $column)->getAlignment()->setHorizontal('center');
+        $spreadsheet->getActiveSheet()->getStyle('A' . $column)->getAlignment()->setVertical('center');
+
         // tulis dalam format .xlsx
         $writer = new Xlsx($spreadsheet);
-        $fileName = 'Setoran Koran ' . $start_date . ' s/d ' . $end_date;
+        $fileName = 'Setoran Koran ' . $start_date . ' sd ' . $end_date;
 
         // Redirect hasil generate xlsx ke web client
         header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

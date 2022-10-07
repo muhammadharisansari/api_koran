@@ -1,0 +1,23 @@
+CRITICAL - 2022-10-07 00:22:30 --> Cell coordinate string can not be a range of cells.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php on line 1296.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(1245): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getWorksheetAndCoordinate('A5:E5')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(1150): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getCell('A5:E5')
+ 3 APPPATH\Controllers\Laporan.php(95): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('A5:E5', 'Total')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 00:54:46 --> The behavior of unparenthesized expressions containing both '.' and '+'/'-' will change in PHP 8: '+'/'-' will take a higher precedence
+in APPPATH\Controllers\Laporan.php on line 60.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(282): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'The behavior of unparenthesized expressions containing both \'.\' and \'+\'/\'-\' will change in PHP 8: \'+\'/\'-\' will take a higher precedence', 'APPPATH\\Controllers\\Laporan.php', 60, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Laporan.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Laporan')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Laporan')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Laporan')
+ 7 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Laporan', true)
+ 8 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
