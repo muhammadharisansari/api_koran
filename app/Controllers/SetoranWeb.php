@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\API\ResponseTrait;
+// use CodeIgniter\API\ResponseTrait;
 
 use App\Models\ModelSetoran;
 
@@ -10,10 +10,11 @@ use App\Models\ModelKoran;
 
 class SetoranWeb extends BaseController
 {
-    use ResponseTrait;
+    // use ResponseTrait;
 
     function __construct()
     {
+
         $this->model = new ModelSetoran();
         $this->modelKoran = new ModelKoran();
     }
@@ -27,38 +28,18 @@ class SetoranWeb extends BaseController
             view('template/footer');
     }
 
-    public function show($id = null)
-    {
-        $data = $this->model->find($id);
-        if ($data) {
-            $response = [
-                'massages' => [
-                    'success' => 'Berhasil mengambil data koran'
-                ],
-                'data' => $data
-            ];
-            return $this->respond($response);
-        } else {
-            return $this->failNotFound("Data dengan id : $id tidak ditemukan");
-        }
-    }
-
     public function create()
     {
         $validation =  \Config\Services::validation();
         $validation->setRules(
             [
                 'nama_mitra' => 'required',
-                'bulan' => 'required',
                 'tanggal' => 'required',
                 'jumlah' => 'required',
             ],
             [   // Errors
                 'nama_mitra' => [
                     'required' => 'Form koran harus diisi',
-                ],
-                'bulan' => [
-                    'required' => 'Form bulan harus diisi',
                 ],
                 'tanggal' => [
                     'required' => 'Form tanggal harus diisi',
@@ -71,9 +52,13 @@ class SetoranWeb extends BaseController
         $isDataValid = $validation->withRequest($this->request)->run();
 
         if ($isDataValid) {
+
+            $potong = substr($this->request->getPost('tanggal'), 5, 2);
+            $bulan = bulan($potong);
+
             $data = [
                 'nama_koran' => $this->request->getPost('nama_mitra'),
-                'bulan' => $this->request->getPost('bulan'),
+                'bulan' => $bulan,
                 'tanggal' => $this->request->getPost('tanggal'),
                 'jumlah' => $this->request->getPost('jumlah'),
                 'created_at' => date('Y-m-d H:i:s'),
@@ -97,16 +82,12 @@ class SetoranWeb extends BaseController
         $validation->setRules(
             [
                 'nama_mitra' => 'required',
-                'bulan' => 'required',
                 'tanggal' => 'required',
                 'jumlah' => 'required',
             ],
             [   // Errors
                 'nama_mitra' => [
                     'required' => 'Form koran harus diisi',
-                ],
-                'bulan' => [
-                    'required' => 'Form bulan harus diisi',
                 ],
                 'tanggal' => [
                     'required' => 'Form tanggal harus diisi',
@@ -121,9 +102,13 @@ class SetoranWeb extends BaseController
         if ($isDataValid) {
             $isExist = $this->model->where('id', $id)->findAll();
             if ($isExist) {
+
+                $potong = substr($this->request->getPost('tanggal'), 5, 2);
+                $bulan = bulan($potong);
+
                 $data = [
                     'nama_koran' => $this->request->getPost('nama_mitra'),
-                    'bulan' => $this->request->getPost('bulan'),
+                    'bulan' => $bulan,
                     'tanggal' => $this->request->getPost('tanggal'),
                     'jumlah' => $this->request->getPost('jumlah'),
                     'updated_at' => date('Y-m-d H:i:s')

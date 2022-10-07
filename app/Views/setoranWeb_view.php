@@ -116,24 +116,6 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Bulan</label>
-                        <select class="custom-select" name="bulan">
-                            <option selected disabled>--Pilih Bulan--</option>
-                            <option value="Januari">(1) Januari</option>
-                            <option value="Februari">(2) Februari</option>
-                            <option value="Maret">(3) Maret</option>
-                            <option value="April">(4) April</option>
-                            <option value="Mei">(5) Mei</option>
-                            <option value="Juni">(6) Juni</option>
-                            <option value="Juli">(7) Juli</option>
-                            <option value="Agustus">(8) Agustus</option>
-                            <option value="September">(9) September</option>
-                            <option value="Oktober">(10) Oktober</option>
-                            <option value="November">(11) November</option>
-                            <option value="Desember">(12) Desember</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label>Tanggal</label>
                         <input type="date" class="form-control" name="tanggal">
                     </div>
@@ -171,24 +153,6 @@
                                 <?php foreach ($koran as $k) : ?>
                                     <option value="<?= $k['koran']; ?>"><?= $k['koran']; ?></option>
                                 <?php endforeach; ?>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Bulan</label>
-                            <select class="custom-select" name="bulan">
-                                <option selected hidden><?= $s['bulan']; ?></option>
-                                <option value="Januari">(1) Januari</option>
-                                <option value="Februari">(2) Februari</option>
-                                <option value="Maret">(3) Maret</option>
-                                <option value="April">(4) April</option>
-                                <option value="Mei">(5) Mei</option>
-                                <option value="Juni">(6) Juni</option>
-                                <option value="Juli">(7) Juli</option>
-                                <option value="Agustus">(8) Agustus</option>
-                                <option value="September">(9) September</option>
-                                <option value="Oktober">(10) Oktober</option>
-                                <option value="November">(11) November</option>
-                                <option value="Desember">(12) Desember</option>
                             </select>
                         </div>
                         <div class="form-group">
