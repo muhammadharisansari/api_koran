@@ -21,7 +21,7 @@
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $mitra; ?> mitra</div>
                                 </div>
                                 <div class="col-xl-4 col-md-4">
-                                    <a href="<?= base_url('/laporan/koranexcel'); ?>" type="button" class="btn btn-primary">Cetak Laporan</a>
+                                    <a href="<?= base_url('/laporan/koranexcel'); ?>" type="button" class="btn btn-primary">Export Excel</a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $setoran; ?> transaksi</div>
                                 </div>
                                 <div class="col-xl-4 col-md-4">
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#txKoran">Cetak Laporan</button>
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#txKoran">Export Excel</button>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-success">Cetak</button>
+                <button type="submit" class="btn btn-success">Export</button>
             </div>
             </form>
         </div>
