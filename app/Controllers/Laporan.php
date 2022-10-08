@@ -16,6 +16,7 @@ class Laporan extends BaseController
     {
         $this->setoran = new ModelSetoran();
         $this->model = new ModelKoran();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()

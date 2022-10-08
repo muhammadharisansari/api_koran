@@ -1,0 +1,15 @@
+CRITICAL - 2022-10-08 10:04:13 --> substr() expects parameter 1 to be string, array given
+in APPPATH\Controllers\Setoran.php on line 78.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'substr() expects parameter 1 to be string, array given', 'APPPATH\\Controllers\\Setoran.php', 78, [...])
+ 2 APPPATH\Controllers\Setoran.php(78): substr([...], 5, 2)
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->update('13')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-08 10:17:08 --> Undefined index: input
+in APPPATH\Controllers\Setoran.php on line 84.
+ 1 APPPATH\Controllers\Setoran.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: input', 'APPPATH\\Controllers\\Setoran.php', 84, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->update('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

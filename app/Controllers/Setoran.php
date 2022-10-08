@@ -13,6 +13,7 @@ class Setoran extends BaseController
     function __construct()
     {
         $this->model = new ModelSetoran();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()
@@ -45,7 +46,18 @@ class Setoran extends BaseController
 
     public function create()
     {
-        $data = $this->request->getPost();
+        // $data = $this->request->getPost();
+
+        $potong = substr($this->request->getVar('tanggal'), 5, 2);
+        $bulan = bulan($potong);
+        $data = [
+            'nama_koran' => $this->request->getVar('nama_koran'),
+            'bulan' => $bulan,
+            'tanggal' => $this->request->getVar('tanggal'),
+            'jumlah' => $this->request->getVar('jumlah'),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => '0000-00-00 00:00:00'
+        ];
 
         if (!$this->model->save($data)) return $this->fail($this->model->errors());
 
@@ -61,13 +73,25 @@ class Setoran extends BaseController
 
     public function update($id = null)
     {
-        $data = $this->request->getRawInput();
+        $input = $this->request->getRawInput();
 
-        $data['id'] = $id;
-        $isExist = $this->model->where('id', $id)->findAll();
+        $isExist = $this->model->find($id);
         if (!$isExist) return $this->failNotFound("Data tidak ditemukan dengan id : $id");
 
-        if (!$this->model->save($data)) return $this->fail($this->model->errors());
+        $potong = substr($input['tanggal'], 5, 2);
+        $bulan = bulan($potong);
+        $data = [
+            'nama_koran' => $input['nama_koran'],
+            'tanggal' => $input['tanggal'],
+            'bulan' => $bulan,
+            'jumlah' => $input['jumlah'],
+            'created_at' => $isExist['created_at'],
+            'updated_at' => date('Y-m-d H:i:s')
+        ];
+
+        // return $this->respond($data);
+
+        if (!$this->model->update($id, $data)) return $this->fail($this->model->errors());
 
         $response = [
             'messages' => [

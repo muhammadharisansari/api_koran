@@ -21,3 +21,74 @@ in APPPATH\Controllers\Laporan.php on line 60.
  9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 20:14:29 --> Undefined index: created_at
+in APPPATH\Controllers\Setoran.php on line 89.
+ 1 APPPATH\Controllers\Setoran.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', 'APPPATH\\Controllers\\Setoran.php', 89, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->update('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 20:18:03 --> Undefined index: data
+in APPPATH\Controllers\Setoran.php on line 90.
+ 1 APPPATH\Controllers\Setoran.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: data', 'APPPATH\\Controllers\\Setoran.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->update('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 20:21:04 --> Undefined offset: 0
+in APPPATH\Controllers\Setoran.php on line 33.
+ 1 APPPATH\Controllers\Setoran.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Setoran.php', 33, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->show('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 20:21:20 --> Undefined index: data
+in APPPATH\Controllers\Setoran.php on line 33.
+ 1 APPPATH\Controllers\Setoran.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: data', 'APPPATH\\Controllers\\Setoran.php', 33, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->show('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 20:26:14 --> Undefined offset: 5
+in APPPATH\Controllers\Setoran.php on line 42.
+ 1 APPPATH\Controllers\Setoran.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 5', 'APPPATH\\Controllers\\Setoran.php', 42, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->show('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 20:34:28 --> Undefined index: created_at
+in APPPATH\Controllers\Setoran.php on line 79.
+ 1 APPPATH\Controllers\Setoran.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', 'APPPATH\\Controllers\\Setoran.php', 79, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Setoran->update('13')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Setoran))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 21:06:43 --> Array and string offset access syntax with curly braces is deprecated
+in APPPATH\Controllers\Setoran.php on line 76.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(282): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Array and string offset access syntax with curly braces is deprecated', 'APPPATH\\Controllers\\Setoran.php', 76, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Setoran.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Setoran')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Setoran')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Setoran')
+ 7 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Setoran', true)
+ 8 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-07 21:07:18 --> Array and string offset access syntax with curly braces is deprecated
+in APPPATH\Controllers\Setoran.php on line 76.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(282): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Array and string offset access syntax with curly braces is deprecated', 'APPPATH\\Controllers\\Setoran.php', 76, [...])
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Setoran.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Setoran')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Setoran')
+ 6 [internal function]: spl_autoload_call('App\\Controllers\\Setoran')
+ 7 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Setoran', true)
+ 8 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

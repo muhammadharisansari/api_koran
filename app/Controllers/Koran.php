@@ -13,6 +13,7 @@ class Koran extends BaseController
     function __construct()
     {
         $this->model = new ModelKoran();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()

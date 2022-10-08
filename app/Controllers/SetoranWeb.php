@@ -17,6 +17,7 @@ class SetoranWeb extends BaseController
 
         $this->model = new ModelSetoran();
         $this->modelKoran = new ModelKoran();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()
