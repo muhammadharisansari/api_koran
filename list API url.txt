@@ -29,11 +29,11 @@
 
 - POST 
 - http://localhost/api_koran/public/setoran
-- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+- field required : nama_koran, tanggal, jumlah
 
 - UPDATE
 - http://localhost/api_koran/public/setoran/1
-- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+- field required : nama_koran, tanggal, jumlah
 
 - DELETE
 - - http://localhost/api_koran/public/setoran/1
