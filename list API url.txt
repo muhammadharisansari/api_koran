@@ -9,11 +9,11 @@
 
 - POST
 - http://192.168.100.5:8080/koran
-- field required : koran, created_at
+- field required : koran
 
 - UPDATE
 - http://192.168.100.5:8080/koran/1
-- field required : koran, created_at
+- field required : koran
 
 - DELETE
 - http://192.168.100.5:8080/koran/1

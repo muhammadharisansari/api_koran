@@ -13,6 +13,7 @@ class Koran extends BaseController
     function __construct()
     {
         $this->model = new ModelKoran();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()
@@ -45,7 +46,12 @@ class Koran extends BaseController
 
     public function create()
     {
-        $data = $this->request->getPost();
+        // $data = $this->request->getPost();
+        $data = [
+            'koran' => $this->request->getPost('koran'),
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => '0000-00-00 00:00:00'
+        ];
 
         if (!$this->model->save($data)) return $this->fail($this->model->errors());
 
@@ -61,13 +67,18 @@ class Koran extends BaseController
 
     public function update($id = null)
     {
-        $data = $this->request->getRawInput();
-
-        $data['id_koran'] = $id;
-        $isExist = $this->model->where('id_koran', $id)->findAll();
+        $ambil = $this->request->getRawInput();
+        
+        $isExist = $this->model->find($id);
         if (!$isExist) return $this->failNotFound("Data tidak ditemukan dengan id : $id");
 
-        if (!$this->model->save($data)) return $this->fail($this->model->errors());
+        $data = [
+            'koran' => $ambil['koran'],
+            'updated_at' => date('Y-m-d H:i:s'),
+            'created_at' => $isExist['created_at']
+        ];
+
+        if (!$this->model->update($id, $data)) return $this->fail($this->model->errors());
 
         $response = [
             'messages' => [
