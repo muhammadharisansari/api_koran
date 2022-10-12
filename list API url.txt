@@ -10,11 +10,11 @@ note: 192.168.100.5 adalah ipv4 laptop asus, disesuaikan dengan device / server
 
 - POST
 - http://192.168.100.5:8080/koran
-- field required : koran, created_at
+- field required : koran
 
 - UPDATE
 - http://192.168.100.5:8080/koran/1
-- field required : koran, created_at 
+- field required : koran
 
 - DELETE
 - http://192.168.100.5:8080/koran/1
@@ -30,11 +30,11 @@ note: 192.168.100.5 adalah ipv4 laptop asus, disesuaikan dengan device / server
 
 - POST 
 - http://localhost/api_koran/public/setoran
-- field required : nama_koran, tanggal, jumlah
+- field required : nama_koran, tanggal, jumlah, created_at, updated_at
 
 - UPDATE
 - http://localhost/api_koran/public/setoran/1
-- field required : nama_koran, tanggal, jumlah
+- field required : nama_koran, tanggal, jumlah, created_at, updated_at
 
 - DELETE
 - - http://localhost/api_koran/public/setoran/1

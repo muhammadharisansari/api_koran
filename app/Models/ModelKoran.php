@@ -12,16 +12,20 @@ class ModelKoran extends Model
 
     protected $validationRules = [
         "koran"         => 'required',
-        // "created_at"    => 'required',
+        "created_at"    => 'required',
+        "updated_at"    => 'required',
     ];
 
     protected $validationMessages = [
         'koran' => [
             'required' => 'Nama koran tidak boleh kosong'
         ],
-        // 'created_at' => [
-        //     'required' => 'created_at tidak boleh kosong'
-        // ],
+        'created_at' => [
+            'required' => 'created_at tidak boleh kosong'
+        ],
+        'updated_at' => [
+            'required' => 'updated_at tidak boleh kosong'
+        ],
     ];
 
     public function hitung()
