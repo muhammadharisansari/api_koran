@@ -47,6 +47,8 @@ class Koran extends BaseController
     public function create()
     {
         $data = $this->request->getPost();
+        $data['created_at'] = date('Y-m-d H:i:s');
+        $data['updated_at'] = '0000-00-00 00:00:00';
 
         if (!$this->model->save($data)) return $this->fail($this->model->errors());
 

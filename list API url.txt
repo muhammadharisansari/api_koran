@@ -1,5 +1,6 @@
 - Tabel Koran  
 - URL default : http://localhost/api_koran/public/...
+note: 192.168.100.5 adalah ipv4 laptop asus, disesuaikan dengan device / server
 
 - GET (all)
 - http://192.168.100.5:8080/koran
@@ -13,7 +14,7 @@
 
 - UPDATE
 - http://192.168.100.5:8080/koran/1
-- field required : koran, created_at
+- field required : koran, created_at 
 
 - DELETE
 - http://192.168.100.5:8080/koran/1
@@ -29,11 +30,11 @@
 
 - POST 
 - http://localhost/api_koran/public/setoran
-- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+- field required : nama_koran, tanggal, jumlah
 
 - UPDATE
 - http://localhost/api_koran/public/setoran/1
-- field required : nama_koran, bulan, tanggal, jumlah, created_at, updated_at
+- field required : nama_koran, tanggal, jumlah
 
 - DELETE
 - - http://localhost/api_koran/public/setoran/1
