@@ -40,6 +40,12 @@ $routes->resource('setoran');
 $routes->resource('koran');
 $routes->resource('user');
 
+$routes->get('/userweb', 'userWeb::index');
+$routes->add('/userweb/create', 'userWeb::create');
+$routes->add('/userweb/update/(:any)', 'userWeb::update/$1');
+$routes->post('/userweb/delete/(:any)', 'userWeb::delete/$1');
+$routes->post('/userweb/verify/(:any)', 'userWeb::verify/$1');
+
 $routes->get('/koranweb', 'KoranWeb::index');
 $routes->add('/koranweb/create', 'KoranWeb::create');
 $routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1');

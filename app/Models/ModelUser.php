@@ -34,10 +34,9 @@ class ModelUser extends Model
 
     ];
 
-    public function hitung()
+    public function hitungUser()
     {
         $query = $this->get();
         return $query->getNumRows();
     }
-
 }

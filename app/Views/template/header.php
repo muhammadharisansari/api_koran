@@ -60,6 +60,11 @@
 
             <!-- Nav Item -->
             <li class="nav-item">
+                <a class="nav-link" href="<?= base_url() ?>/userweb">
+                    <span>User</span></a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>/koranweb">
                     <span>Mitra koran</span></a>
             </li>
