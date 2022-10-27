@@ -48,7 +48,9 @@ class Koran extends BaseController
     {
         $data = [
             'koran' => $this->request->getPost('koran'),
+            'created_by' => $this->request->getPost('created_by'),
             'created_at' => date('Y-m-d H:i:s'),
+            'updated_by' => 'none',
             'updated_at' => '0000-00-00 00:00:00'
         ];
 
@@ -74,7 +76,9 @@ class Koran extends BaseController
         $data = [
             'koran' => $ambil['koran'],
             'updated_at' => date('Y-m-d H:i:s'),
-            'created_at' => $isExist['created_at']
+            'updated_by' => $ambil['updated_by'],
+            'created_at' => $isExist['created_at'],
+            'created_by' => $isExist['created_by'],
         ];
 
         if (!$this->model->update($id, $data)) return $this->fail($this->model->errors());

@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Dashboard::index');
 $routes->resource('setoran');
 $routes->resource('koran');
+$routes->resource('user');
 
 $routes->get('/koranweb', 'KoranWeb::index');
 $routes->add('/koranweb/create', 'KoranWeb::create');

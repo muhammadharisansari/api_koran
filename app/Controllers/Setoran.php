@@ -56,7 +56,9 @@ class Setoran extends BaseController
             'tanggal' => $this->request->getVar('tanggal'),
             'jumlah' => $this->request->getVar('jumlah'),
             'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => '0000-00-00 00:00:00'
+            'created_by' => $this->request->getVar('created_by'),
+            'updated_at' => '0000-00-00 00:00:00',
+            'updated_by' => 'none'
         ];
 
         if (!$this->model->save($data)) return $this->fail($this->model->errors());
@@ -86,7 +88,9 @@ class Setoran extends BaseController
             'bulan' => $bulan,
             'jumlah' => $input['jumlah'],
             'created_at' => $isExist['created_at'],
-            'updated_at' => date('Y-m-d H:i:s')
+            'created_by' => $isExist['created_by'],
+            'updated_at' => date('Y-m-d H:i:s'),
+            'updated_by' => $input['updated_by']
         ];
 
         // return $this->respond($data);
