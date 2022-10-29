@@ -1,0 +1,80 @@
+CRITICAL - 2022-10-28 08:43:03 --> Trying to get property 'model' of non-object
+in APPPATH\Controllers\User.php on line 74.
+ 1 APPPATH\Controllers\User.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'model\' of non-object', 'APPPATH\\Controllers\\User.php', 74, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('verify')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:06:04 --> Undefined index: pin
+in APPPATH\Controllers\User.php on line 76.
+ 1 APPPATH\Controllers\User.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pin', 'APPPATH\\Controllers\\User.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:06:57 --> Undefined index: pin
+in APPPATH\Controllers\User.php on line 76.
+ 1 APPPATH\Controllers\User.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pin', 'APPPATH\\Controllers\\User.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:07:12 --> Array to string conversion
+in APPPATH\Controllers\User.php on line 77.
+ 1 APPPATH\Controllers\User.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\User.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:08:58 --> Array to string conversion
+in APPPATH\Controllers\User.php on line 77.
+ 1 APPPATH\Controllers\User.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\User.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:09:26 --> Undefined index: pin
+in APPPATH\Controllers\User.php on line 77.
+ 1 APPPATH\Controllers\User.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pin', 'APPPATH\\Controllers\\User.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:09:41 --> Undefined offset: 2
+in APPPATH\Controllers\User.php on line 77.
+ 1 APPPATH\Controllers\User.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 2', 'APPPATH\\Controllers\\User.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:09:52 --> Array to string conversion
+in APPPATH\Controllers\User.php on line 77.
+ 1 APPPATH\Controllers\User.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\User.php', 77, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:10:14 --> Undefined index: pin
+in APPPATH\Controllers\User.php on line 76.
+ 1 APPPATH\Controllers\User.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: pin', 'APPPATH\\Controllers\\User.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-28 09:12:46 --> Undefined index: email
+in APPPATH\Controllers\User.php on line 76.
+ 1 APPPATH\Controllers\User.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: email', 'APPPATH\\Controllers\\User.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->show('aris@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

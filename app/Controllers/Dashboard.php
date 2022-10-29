@@ -14,13 +14,13 @@ class Dashboard extends BaseController
         $this->setoran = new ModelSetoran();
         $this->model = new ModelKoran();
         $this->user = new ModelUser();
+        date_default_timezone_set("Asia/makassar");
     }
 
     public function index()
     {
         $tanggal = date('Y-m-d');
         $bulan = date('Y-m');
-
         $data['mitra'] = $this->model->hitung();
 
         $data['setoran'] = $this->setoran->hitungsetoran();

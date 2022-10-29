@@ -28,7 +28,7 @@ class UserWeb extends BaseController
         $validation->setRules(
             [
                 'email' => 'required|valid_email',
-                'pin' => 'required|max_length[6]',
+                'pin' => 'required|max_length[6]|min_length[6]',
             ],
             [   // Errors
                 'email' => [
@@ -38,6 +38,7 @@ class UserWeb extends BaseController
                 'pin'   => [
                     'required' => 'PIN tidak boleh kosong',
                     'max_length' => 'Maksimal PIN 6 karakter',
+                    'min_length' => 'PIN harus 6 karakter',
                 ]
             ]
         );
@@ -76,13 +77,14 @@ class UserWeb extends BaseController
         $validation =  \Config\Services::validation();
         $validation->setRules(
             [
-                'pin' => 'required|max_length[6]',
+                'pin' => 'required|max_length[6]|min_length[6]',
                 'pinconfirm' => 'required|matches[pin]',
             ],
             [   // Errors
                 'pin'   => [
                     'required' => 'PIN tidak boleh kosong',
                     'max_length' => 'Maksimal PIN 6 karakter',
+                    'min_length' => 'PIN harus 6 karakter',
                 ],
                 'pinconfirm'   => [
                     'required' => 'Konfirmasi PIN tidak boleh kosong',

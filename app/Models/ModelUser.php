@@ -8,22 +8,18 @@ class ModelUser extends Model
 {
     protected $table = "user";
     protected $primaryKey = "id";
-    protected $allowedFields = ["email", "pin", "verify", "created_at"];
+    protected $allowedFields = ["email", "verify", "created_at"];
 
     protected $validationRules = [
         "email"         => 'required|valid_email',
-        "pin"           => 'required',
         "verify"        => 'required',
         "created_at"    => 'required',
     ];
 
     protected $validationMessages = [
         'email' => [
-            'required' => 'Email tidak boleh kosong',
-            'valid_email' => 'email tidak valid',
-        ],
-        'pin' => [
-            'required' => 'Nama koran tidak boleh kosong'
+            'required'      => 'Email tidak boleh kosong',
+            'valid_email'   => 'email tidak valid',
         ],
         'verify' => [
             'required' => 'verify tidak boleh kosong'

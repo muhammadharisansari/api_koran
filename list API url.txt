@@ -44,10 +44,9 @@ note: 192.168.100.5 adalah ipv4 laptop asus, disesuaikan dengan device / server
 
 - POST
 - http://localhost:8080/user
-- field required : email (jika email sudah terdaftar maka tidak akan disimpan), pin
+- field required : email (jika email sudah terdaftar maka tidak akan disimpan)
 
-- UPDATE
-- http://localhost:8080/user/1
-- field required : pin
+- GET (detail)
+- http://localhost:8080/user/xample@gmail.com
 
 
