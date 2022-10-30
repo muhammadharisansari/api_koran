@@ -40,7 +40,9 @@ class KoranWeb extends BaseController
         if ($isDataValid) {
             $data = [
                 'koran' => $this->request->getPost('nama_mitra'),
+                'created_by' => 'admin web',
                 'created_at' => date('Y-m-d H:i:s'),
+                'updated_by' => 'none',
                 'updated_at' => '0000-00-00 00:00:00'
             ];
 
@@ -73,7 +75,8 @@ class KoranWeb extends BaseController
             $isExist = $this->model->where('id_koran', $id)->findAll();
             $data = [
                 'koran' => $this->request->getPost('nama_mitra'),
-                'updated_at' => date('Y-m-d H:i:s')
+                'updated_by' => 'admin web',
+                'updated_at' => date('Y-m-d H:i:s'),
             ];
             // dd($data);
             if ($isExist) {

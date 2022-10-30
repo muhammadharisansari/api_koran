@@ -155,7 +155,22 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nama Mitra Koran</label>
                             <input type="text" class="form-control" name="nama_mitra" value="<?= $m['koran']; ?>">
-
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Pembuat</label>
+                            <input type="text" class="form-control" value="<?= $m['created_by']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Waktu pembuatan</label>
+                            <input type="text" class="form-control" value="<?= $m['created_at']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Pengedit</label>
+                            <input type="text" class="form-control" value="<?= $m['updated_by']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Waktu edit</label>
+                            <input type="text" class="form-control" value="<?= $m['updated_at']; ?>" readonly>
                         </div>
                 </div>
                 <div class="modal-footer">

@@ -163,6 +163,22 @@
                             <label>Jumlah</label>
                             <input type="number" class="form-control" name="jumlah" value="<?= $s['jumlah']; ?>">
                         </div>
+                        <div class="form-group">
+                            <label>Pembuat</label>
+                            <input class="form-control" value="<?= $s['created_by']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Waktu pembuatan</label>
+                            <input class="form-control" value="<?= $s['created_at']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Pengedit</label>
+                            <input class="form-control" value="<?= $s['updated_by']; ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Waktu edit</label>
+                            <input class="form-control" value="<?= $s['updated_at']; ?>" readonly>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>

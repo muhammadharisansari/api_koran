@@ -63,7 +63,9 @@ class SetoranWeb extends BaseController
                 'tanggal' => $this->request->getPost('tanggal'),
                 'jumlah' => $this->request->getPost('jumlah'),
                 'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => '0000-00-00 00:00:00'
+                'created_by' => 'admin web',
+                'updated_at' => '0000-00-00 00:00:00',
+                'updated_by' => 'none'
             ];
 
             if (!$this->model->save($data)) {
@@ -112,7 +114,8 @@ class SetoranWeb extends BaseController
                     'bulan' => $bulan,
                     'tanggal' => $this->request->getPost('tanggal'),
                     'jumlah' => $this->request->getPost('jumlah'),
-                    'updated_at' => date('Y-m-d H:i:s')
+                    'updated_at' => date('Y-m-d H:i:s'),
+                    'updated_by' => 'admin web',
                 ];
                 $this->model->update($id, $data);
 

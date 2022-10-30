@@ -81,10 +81,6 @@
                                                             Verifikasi
                                                         </button>
                                                     <?php } ?>
-                                                    <button class="dropdown-item" data-toggle="modal" data-target="#edit<?= $u['id']; ?>">
-                                                        <i class="bi bi-pencil fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                        PIN
-                                                    </button>
                                                     <button class="dropdown-item" data-toggle="modal" data-target="#exampleModal<?= $u['id']; ?>">
                                                         <i class="bi bi-trash fa-sm fa-fw mr-2 text-gray-400"></i>
                                                         Hapus
