@@ -10171,10 +10171,10 @@ a:focus {
   height: 4.375rem;
 }
 
-.topbar #sidebarToggleTop {
-  height: 2.5rem;
-  width: 2.5rem;
-}
+/* .topbar #sidebarToggleTop {
+  height: 12.5rem;
+  width: 12.5rem;
+} */
 
 .topbar #sidebarToggleTop:hover {
   background-color: #eaecf4;
@@ -10410,20 +10410,20 @@ a:focus {
   font-weight: 700;
 }
 
-.sidebar #sidebarToggle {
-  width: 2.5rem;
-  height: 2.5rem;
+/* .sidebar #sidebarToggle {
+  width: 12.5rem;
+  height: 12.5rem;
   text-align: center;
   margin-bottom: 1rem;
   cursor: pointer;
-}
+} */
 
-.sidebar #sidebarToggle::after {
+/* .sidebar #sidebarToggle::after {
   font-weight: 900;
   content: '\f104';
   font-family: 'Font Awesome 5 Free';
   margin-right: 0.1rem;
-}
+} */
 
 .sidebar #sidebarToggle:hover {
   text-decoration: none;
@@ -10432,17 +10432,17 @@ a:focus {
 .sidebar #sidebarToggle:focus {
   outline: none;
 }
-
+/* 
 .sidebar.toggled {
   width: 0 !important;
   overflow: hidden;
-}
+} */
 
-.sidebar.toggled #sidebarToggle::after {
+/* .sidebar.toggled #sidebarToggle::after {
   content: '\f105';
   font-family: 'Font Awesome 5 Free';
   margin-left: 0.25rem;
-}
+} */
 
 .sidebar.toggled .sidebar-card {
   display: none;
@@ -10669,9 +10669,9 @@ a:focus {
   background-color: #eaecf4;
 }
 
-.sidebar-light #sidebarToggle::after {
+/* .sidebar-light #sidebarToggle::after {
   color: #b7b9cc;
-}
+} */
 
 .sidebar-light #sidebarToggle:hover {
   background-color: #dddfeb;
@@ -10721,17 +10721,17 @@ a:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.sidebar-dark #sidebarToggle::after {
+/* .sidebar-dark #sidebarToggle::after {
   color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 .sidebar-dark #sidebarToggle:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-.sidebar-dark.toggled #sidebarToggle::after {
+/* .sidebar-dark.toggled #sidebarToggle::after {
   color: rgba(255, 255, 255, 0.5);
-}
+} */
 
 .btn-circle {
   border-radius: 100%;

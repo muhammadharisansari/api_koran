@@ -14,7 +14,7 @@
     <!-- Custom fonts for this template-->
     <!-- <link href="<?= base_url() ?>/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    <link rel="icon" href="<?= base_url() ?>/assets/img/logo dataKoranApp.png" type="image/gif">
     <!-- Custom styles for this template-->
     <link href="<?= base_url() ?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -35,7 +35,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <!-- <img src="<?= base_url() ?>/assets/img/logo dataKoranApp.png" alt=""> -->
+                    <img src="<?= base_url() ?>/assets/img/logo dataKoranApp.png" alt="" height="37" width="24">
+                </div>
                 <div class="sidebar-brand-text mx-3">Mitra Koran Web</div>
             </a>
 
@@ -45,7 +48,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url(); ?>">
-                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <i class="bi bi-speedometer"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
@@ -61,26 +64,36 @@
             <!-- Nav Item -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>/userweb">
+                    <i class="bi bi-person-badge"></i>
                     <span>User</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>/koranweb">
+                    <i class="bi bi-journal-bookmark-fill"></i>
                     <span>Mitra koran</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>/setoranweb">
+                    <i class="bi bi-card-checklist"></i>
                     <span> Transaksi Setoran</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url() ?>/laporan">
+                    <i class="bi bi-graph-up"></i>
                     <span> Laporan</span></a>
             </li>
 
+
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="border-0" id="sidebarToggle"></button>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -110,16 +123,8 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
