@@ -6,6 +6,23 @@
         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
     </div>
 
+    <?php if (session()->getFlashData('pesan')) { ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Sukses!</strong> <?= session()->getFlashData('pesan');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php } elseif (session()->getFlashData('error')) { ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Gagal diproses :</strong>
+            <?= session()->getFlashData('error');  ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <?php }  ?>
+
     <!-- Content Row -->
     <div class="row">
 
@@ -19,7 +36,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $mitra; ?> mitra</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="bi bi-journal-bookmark-fill fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -36,7 +53,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $user; ?> User</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fa fa-users fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -53,7 +70,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $setoran; ?> transaksi</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="bi bi-card-checklist fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -70,7 +87,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $month; ?> transaksi</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="bi bi-card-checklist fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -87,7 +104,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $today; ?> transaksi</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="bi bi-card-checklist fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>

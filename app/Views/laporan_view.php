@@ -20,13 +20,11 @@
                                 <div class="col-xl-8 col-md-8">
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $mitra; ?> mitra</div>
                                 </div>
-                                <div class="col-xl-4 col-md-4">
-                                    <a href="<?= base_url('/laporan/koranexcel'); ?>" type="button" class="btn btn-primary">Export Excel</a>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <a href="<?= base_url('/laporan/koranexcel'); ?>" type="button" class="btn btn-primary">Export Excel</a>
                         </div>
                     </div>
                 </div>
@@ -46,13 +44,11 @@
                                 <div class="col-xl-8 col-md-8">
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $setoran; ?> transaksi</div>
                                 </div>
-                                <div class="col-xl-4 col-md-4">
-                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#txKoran">Export Excel</button>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#txKoran">Export Excel</button>
                         </div>
                     </div>
                 </div>

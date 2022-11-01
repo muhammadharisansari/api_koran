@@ -17,7 +17,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Dashboard');
+$routes->setDefaultController('Login');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -35,30 +35,34 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index');
+$routes->get('/', 'Login::index');
+$routes->post('/auth', 'Login::auth');
+$routes->get('/logout', 'Login::logout', ['filter' => 'auth']);
+$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
+$routes->post('/dashboard/ubahPW/(:any)', 'Dashboard::ubahPW/$1', ['filter' => 'auth']);
 $routes->resource('setoran');
 $routes->resource('koran');
 $routes->resource('user');
 
-$routes->get('/userweb', 'userWeb::index');
-$routes->add('/userweb/create', 'userWeb::create');
-$routes->add('/userweb/update/(:any)', 'userWeb::update/$1');
-$routes->post('/userweb/delete/(:any)', 'userWeb::delete/$1');
-$routes->post('/userweb/verify/(:any)', 'userWeb::verify/$1');
+$routes->get('/userweb', 'userWeb::index', ['filter' => 'auth']);
+$routes->add('/userweb/create', 'userWeb::create', ['filter' => 'auth']);
+$routes->add('/userweb/update/(:any)', 'userWeb::update/$1', ['filter' => 'auth']);
+$routes->post('/userweb/delete/(:any)', 'userWeb::delete/$1', ['filter' => 'auth']);
+$routes->post('/userweb/verify/(:any)', 'userWeb::verify/$1', ['filter' => 'auth']);
 
-$routes->get('/koranweb', 'KoranWeb::index');
-$routes->add('/koranweb/create', 'KoranWeb::create');
-$routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1');
-$routes->post('/koranweb/delete/(:any)', 'KoranWeb::delete/$1');
+$routes->get('/koranweb', 'KoranWeb::index', ['filter' => 'auth']);
+$routes->add('/koranweb/create', 'KoranWeb::create', ['filter' => 'auth']);
+$routes->add('/koranweb/update/(:any)', 'KoranWeb::update/$1', ['filter' => 'auth']);
+$routes->post('/koranweb/delete/(:any)', 'KoranWeb::delete/$1', ['filter' => 'auth']);
 
-$routes->get('/setoranweb', 'SetoranWeb::index');
-$routes->add('/setoranweb/create', 'setoranWeb::create');
-$routes->post('/setoranweb/update/(:any)', 'setoranWeb::update/$1');
-$routes->post('/setoranweb/delete/(:any)', 'setoranWeb::delete/$1');
+$routes->get('/setoranweb', 'SetoranWeb::index', ['filter' => 'auth']);
+$routes->add('/setoranweb/create', 'setoranWeb::create', ['filter' => 'auth']);
+$routes->post('/setoranweb/update/(:any)', 'setoranWeb::update/$1', ['filter' => 'auth']);
+$routes->post('/setoranweb/delete/(:any)', 'setoranWeb::delete/$1', ['filter' => 'auth']);
 
-$routes->get('/laporan', 'Laporan::index');
-$routes->get('/laporan/koranexcel', 'Laporan::koranexcel');
-$routes->add('/laporan/setoranexcel', 'Laporan::setoranexcel');
+$routes->get('/laporan', 'Laporan::index', ['filter' => 'auth']);
+$routes->get('/laporan/koranexcel', 'Laporan::koranexcel', ['filter' => 'auth']);
+$routes->add('/laporan/setoranexcel', 'Laporan::setoranexcel', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

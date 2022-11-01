@@ -12,7 +12,7 @@
     <title>Mitra Koran</title>
 
     <!-- Custom fonts for this template-->
-    <!-- <link href="<?= base_url() ?>/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="<?= base_url() ?>/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link rel="icon" href="<?= base_url() ?>/assets/img/logo dataKoranApp.png" type="image/gif">
     <!-- Custom styles for this template-->
@@ -35,8 +35,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <!-- <img src="<?= base_url() ?>/assets/img/logo dataKoranApp.png" alt=""> -->
+                <div class="sidebar-brand-icon ">
                     <img src="<?= base_url() ?>/assets/img/logo dataKoranApp.png" alt="" height="37" width="24">
                 </div>
                 <div class="sidebar-brand-text mx-3">Mitra Koran Web</div>
@@ -47,7 +46,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url(); ?>">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>">
                     <i class="bi bi-speedometer"></i>
                     <span>Dashboard</span>
                 </a>
@@ -117,17 +116,17 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session()->get('nama'); ?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url() ?>/assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ubah">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<?= base_url(); ?>/logout">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -138,3 +137,33 @@
 
                 </nav>
                 <!-- End of Topbar -->
+
+                <!-- Modal ubah-->
+                <div class="modal fade" id="ubah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="<?= base_url() . '/dashboard/ubahPW/' . session()->get('id') ?>" method="post">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Password Baru</label>
+                                        <input type="password" class="form-control" name="pwBaru">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Konfirmasi Password Baru</label>
+                                        <input type="password" class="form-control" name="pwKonfirm">
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                <button type="submit" class="btn btn-success">Ubah</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
