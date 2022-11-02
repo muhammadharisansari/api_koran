@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
 use App\Models\ModelLogin;
 
 class Login extends BaseController
@@ -10,7 +9,8 @@ class Login extends BaseController
     public function index()
     {
         helper(['form']);
-        echo view('login_view');
+        return view('template/header') .
+            view('login_view');
     }
 
     public function auth()

@@ -18,6 +18,7 @@ class UserWeb extends BaseController
         $data['user'] = $this->model->orderBy('id', 'desc')->findAll();
         // dd($data);
         return  view('template/header') .
+            view('template/sidebar') .
             view('userWeb_view', $data) .
             view('template/footer');
     }

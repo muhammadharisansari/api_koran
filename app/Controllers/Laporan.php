@@ -26,6 +26,7 @@ class Laporan extends BaseController
         // dd($data['mitra'], $data['setoran']);
 
         return  view('template/header') .
+            view('template/sidebar') .
             view('laporan_view', $data) .
             view('template/footer');
     }

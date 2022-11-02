@@ -2,15 +2,12 @@
 
 namespace App\Controllers;
 
-// use CodeIgniter\API\ResponseTrait;
-
 use App\Models\ModelSetoran;
 
 use App\Models\ModelKoran;
 
 class SetoranWeb extends BaseController
 {
-    // use ResponseTrait;
 
     function __construct()
     {
@@ -25,6 +22,7 @@ class SetoranWeb extends BaseController
         $data['koran']      = $this->modelKoran->findAll();
         $data['setoran']    = $this->model->orderBy('tanggal', 'desc')->findAll();
         return view('template/header') .
+            view('template/sidebar') .
             view('setoranWeb_view', $data) .
             view('template/footer');
     }
@@ -140,6 +138,21 @@ class SetoranWeb extends BaseController
         $this->model->delete($id);
         session()->setFlashData('pesan', 'Data berhasil diperbarui');
 
+        return redirect('setoranweb');
+    }
+
+    public function deleteAll()
+    {
+        if (!isset($_POST['dipilih']) || sizeof($_POST['dipilih']) < 2) {
+            session()->setFlashData('error', 'pilih setidaknya 2 data untuk dihapus');
+            return redirect('setoranweb');
+        }
+        $pilih = $_POST['dipilih'];
+
+        for ($i = 0; $i < sizeof($pilih); $i++) {
+            $this->model->where('id', $pilih[$i])->delete();
+        }
+        session()->setFlashData('pesan', 'berhasil menghapus data');
         return redirect('setoranweb');
     }
 }

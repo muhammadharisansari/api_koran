@@ -36,6 +36,7 @@ class Dashboard extends BaseController
         $data['user'] = $this->user->hitungUser();
 
         return  view('template/header') .
+            view('template/sidebar') .
             view('dashboard_view', $data) .
             view('template/footer');
     }

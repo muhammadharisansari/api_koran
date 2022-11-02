@@ -18,6 +18,7 @@ class KoranWeb extends BaseController
         $data['mitra'] = $this->model->orderBy('id_koran', 'desc')->findAll();
         // dd($data);
         return  view('template/header') .
+            view('template/sidebar') .
             view('koranWeb_view', $data) .
             view('template/footer');
     }

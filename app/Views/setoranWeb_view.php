@@ -25,71 +25,83 @@
     <?php }  ?>
 
     <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
+    <form action="<?= base_url('/setoranweb/deleteAll'); ?>" enctype="application/x-www-form-urlencoded" method="post" accept-charset="utf-8">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col col-lg-2 col-sm-2 col-md-2 ">
+                        <button type="submit" id="delAll" class="btn btn-danger">
+                            Hapus bertanda
+                        </button>
+                    </div>
+                    <div class="col col-lg-2 col-sm-2 col-md-2 ">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah">
+                            Tambah data
+                        </button>
+                    </div>
+                </div>
 
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#tambah">
-                Tambah data
-            </button>
-
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Koran</th>
-                            <th>Bulan</th>
-                            <th>Tanggal</th>
-                            <th>Jumlah</th>
-                            <th>Dibuat</th>
-                            <th>Diperbarui</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($setoran as $s) : ?>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
                             <tr>
-                                <td><?= $s['id']; ?></td>
-                                <td><?= $s['nama_koran'];; ?></td>
-                                <td><?= $s['bulan'];; ?></td>
-                                <td><?= $s['tanggal'];; ?></td>
-                                <td><?= $s['jumlah'];; ?></td>
-                                <td><?= $s['created_at']; ?></td>
-                                <td><?= $s['updated_at']; ?></td>
-                                <td>
-                                    <center>
-                                        <ul class="navbar-nav ml-auto">
-                                            <!-- Nav Item - User Information -->
-                                            <li class="nav-item dropdown no-arrow">
-                                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                                        <i class="bi bi-gear"></i>
-                                                    </span>
-                                                </a>
-                                                <!-- Dropdown - User Information -->
-                                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                                    <button class="dropdown-item" data-toggle="modal" data-target="#edit<?= $s['id']; ?>">
-                                                        <i class="bi bi-pencil fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                        Edit
-                                                    </button>
-                                                    <button class="dropdown-item" data-toggle="modal" data-target="#hapus<?= $s['id']; ?>">
-                                                        <i class="bi bi-trash fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                        Hapus
-                                                    </button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </center>
-                                </td>
+                                <th><input type="checkbox" onchange="checkAll(this)"></th>
+                                <th>ID</th>
+                                <th>Koran</th>
+                                <th>Bulan</th>
+                                <th>Tanggal</th>
+                                <th>Jumlah</th>
+                                <th>Dibuat</th>
+                                <th>Diperbarui</th>
+                                <th></th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($setoran as $s) : ?>
+                                <tr>
+                                    <td><input type="checkbox" name="dipilih[]" value="<?= $s['id']; ?>"></td>
+                                    <td><?= $s['id']; ?></td>
+                                    <td><?= $s['nama_koran'];; ?></td>
+                                    <td><?= $s['bulan'];; ?></td>
+                                    <td><?= $s['tanggal'];; ?></td>
+                                    <td><?= $s['jumlah'];; ?></td>
+                                    <td><?= $s['created_at']; ?></td>
+                                    <td><?= $s['updated_at']; ?></td>
+                                    <td>
+                                        <center>
+                                            <ul class="navbar-nav ml-auto">
+                                                <!-- Nav Item - User Information -->
+                                                <li class="nav-item dropdown no-arrow">
+                                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                                            <i class="bi bi-gear"></i>
+                                                        </span>
+                                                    </a>
+                                                    <!-- Dropdown - User Information -->
+                                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                                        <button class="dropdown-item" data-toggle="modal" data-target="#edit<?= $s['id']; ?>">
+                                                            <i class="bi bi-pencil fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                            Edit
+                                                        </button>
+                                                        <button class="dropdown-item" data-toggle="modal" data-target="#hapus<?= $s['id']; ?>">
+                                                            <i class="bi bi-trash fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                            Hapus
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </center>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 
 </div>
 <!-- /.container-fluid -->
@@ -214,3 +226,23 @@
         </div>
     </div>
 <?php endforeach; ?>
+
+<script type="text/javascript">
+    function checkAll(box) {
+        let checkboxes = document.getElementsByTagName('input');
+        if (box.checked) { // jika checkbox teratar dipilih maka semua tag input juga dipilih
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == 'checkbox' && checkboxes[i].name == 'dipilih[]') {
+                    checkboxes[i].checked = true;
+                }
+            }
+        } else { // jika checkbox teratas tidak dipilih maka semua tag input juga tidak dipilih
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == 'checkbox') {
+                    checkboxes[i].checked = false;
+                }
+            }
+        }
+    }
+</script>

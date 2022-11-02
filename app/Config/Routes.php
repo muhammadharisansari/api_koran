@@ -59,6 +59,7 @@ $routes->get('/setoranweb', 'SetoranWeb::index', ['filter' => 'auth']);
 $routes->add('/setoranweb/create', 'setoranWeb::create', ['filter' => 'auth']);
 $routes->post('/setoranweb/update/(:any)', 'setoranWeb::update/$1', ['filter' => 'auth']);
 $routes->post('/setoranweb/delete/(:any)', 'setoranWeb::delete/$1', ['filter' => 'auth']);
+$routes->post('/setoranweb/deleteAll', 'setoranWeb::deleteAll', ['filter' => 'auth']);
 
 $routes->get('/laporan', 'Laporan::index', ['filter' => 'auth']);
 $routes->get('/laporan/koranexcel', 'Laporan::koranexcel', ['filter' => 'auth']);
