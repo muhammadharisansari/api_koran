@@ -1,0 +1,451 @@
+CRITICAL - 2022-11-03 17:28:49 --> Undefined variable: getAllKoran
+in APPPATH\Controllers\Laporan.php on line 117.
+ 1 APPPATH\Controllers\Laporan.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: getAllKoran', 'APPPATH\\Controllers\\Laporan.php', 117, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:44:58 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:46:23 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:46:53 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:48:05 --> Illegal offset type
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset type', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:48:16 --> Illegal offset type
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset type', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 17:48:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'news' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(88): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 17:48:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'news' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` = Tribun news', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `nama_koran` = Tribun news')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `nama_koran` = Tribun news')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` = Tribun news', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(88): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:50:44 --> Undefined offset: 0
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 17:53:50 --> Undefined index: koran
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 APPPATH\Controllers\Laporan.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:09:24 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 91.
+ 1 APPPATH\Controllers\Laporan.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:10:05 --> array_push() expects parameter 1 to be array, string given
+in APPPATH\Controllers\Laporan.php on line 89.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, string given', 'APPPATH\\Controllers\\Laporan.php', 89, [...])
+ 2 APPPATH\Controllers\Laporan.php(89): array_push('Tribun news', [])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:10:26 --> array_push() expects parameter 1 to be array, null given
+in APPPATH\Controllers\Laporan.php on line 88.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_push() expects parameter 1 to be array, null given', 'APPPATH\\Controllers\\Laporan.php', 88, [...])
+ 2 APPPATH\Controllers\Laporan.php(88): array_push(null, 'Tribun news')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:10:34 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 91.
+ 1 APPPATH\Controllers\Laporan.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 91, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:17:45 --> Undefined index: koran
+in APPPATH\Controllers\Laporan.php on line 89.
+ 1 APPPATH\Controllers\Laporan.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Controllers\\Laporan.php', 89, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:18:02 --> Undefined index: koran
+in APPPATH\Controllers\Laporan.php on line 89.
+ 1 APPPATH\Controllers\Laporan.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Controllers\\Laporan.php', 89, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:18:25 --> Undefined index: koran
+in APPPATH\Controllers\Laporan.php on line 89.
+ 1 APPPATH\Controllers\Laporan.php(89): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: koran', 'APPPATH\\Controllers\\Laporan.php', 89, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 18:19:45 --> Undefined index: nama_koran
+in APPPATH\Controllers\Laporan.php on line 90.
+ 1 APPPATH\Controllers\Laporan.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: nama_koran', 'APPPATH\\Controllers\\Laporan.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 20:25:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"Tribun news
+ LIMIT 1' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(96): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 20:25:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"Tribun news
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-10-01" and "2022-11-03"&& `nama_koran` LIKE "Tribun news
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-10-01" and "2022-11-03"&& `nama_koran` LIKE "Tribun news
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-10-01" and "2022-11-03"&& `nama_koran` LIKE "Tribun news
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-10-01" and "2022-11-03"&& `nama_koran` LIKE "Tribun news
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Laporan.php(96): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 20:27:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'news
+ LIMIT 1' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(96): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 20:27:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'news
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Tribun news
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Tribun news
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Tribun news
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Tribun news
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Laporan.php(96): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 20:29:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'post
+ LIMIT 1' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(93): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 20:29:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'post
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Laporan.php(93): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 20:30:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'post
+ LIMIT 1' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(93): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 20:30:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'post
+ LIMIT 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `nama_koran` LIKE Banjarmasin post
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Laporan.php(93): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 20:33:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Post' at line 1 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from s...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('select * from s...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('select * from s...')
+#3 C:\xampp\htdocs\api_koran\system\Model.php(767): CodeIgniter\Database\BaseConnection->query('select * from s...')
+#4 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(93): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#6 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-03 20:33:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Post' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('select * from setoran where nama_koran LIKE Banjarmasin Post', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('select * from setoran where nama_koran LIKE Banjarmasin Post')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('select * from setoran where nama_koran LIKE Banjarmasin Post')
+ 4 SYSTEMPATH\Model.php(767): CodeIgniter\Database\BaseConnection->query('select * from setoran where nama_koran LIKE Banjarmasin Post')
+ 5 APPPATH\Controllers\Laporan.php(93): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 20:37:49 --> Illegal string offset 'jumlah'
+in APPPATH\Controllers\Laporan.php on line 100.
+ 1 APPPATH\Controllers\Laporan.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'jumlah\'', 'APPPATH\\Controllers\\Laporan.php', 100, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 20:44:03 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 106.
+ 1 APPPATH\Controllers\Laporan.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 106, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 20:48:32 --> Array to string conversion
+in APPPATH\Controllers\Laporan.php on line 106.
+ 1 APPPATH\Controllers\Laporan.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Laporan.php', 106, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 20:54:15 --> preg_match() expects parameter 2 to be string, array given
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php on line 63.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match() expects parameter 2 to be string, array given', 'VENDORPATH\\phpoffice\\phpspreadsheet\\src\\PhpSpreadsheet\\Cell\\DefaultValueBinder.php', 63, [...])
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php(63): preg_match('/^[\\+\\-]?(\\d+\\.?\\d*|\\d*\\.?\\d+)([Ee][\\-\\+]?[0-2]?\\d{1,3})?$/', [...])
+ 3 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php(35): PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder::dataTypeForValue([...])
+ 4 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\Cell.php(190): PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder->bindValue(Object(PhpOffice\PhpSpreadsheet\Cell\Cell), [...])
+ 5 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(1150): PhpOffice\PhpSpreadsheet\Cell\Cell->setValue([...])
+ 6 APPPATH\Controllers\Laporan.php(143): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('G16', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-03 20:55:56 --> preg_match() expects parameter 2 to be string, array given
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php on line 63.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match() expects parameter 2 to be string, array given', 'VENDORPATH\\phpoffice\\phpspreadsheet\\src\\PhpSpreadsheet\\Cell\\DefaultValueBinder.php', 63, [...])
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php(63): preg_match('/^[\\+\\-]?(\\d+\\.?\\d*|\\d*\\.?\\d+)([Ee][\\-\\+]?[0-2]?\\d{1,3})?$/', [...])
+ 3 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\DefaultValueBinder.php(35): PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder::dataTypeForValue([...])
+ 4 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Cell\Cell.php(190): PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder->bindValue(Object(PhpOffice\PhpSpreadsheet\Cell\Cell), [...])
+ 5 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(1150): PhpOffice\PhpSpreadsheet\Cell\Cell->setValue([...])
+ 6 APPPATH\Controllers\Laporan.php(139): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setCellValue('G11', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-03 21:06:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nama_koran LIKE "Tribun news"' at line 3 in C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\api_koran\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api_koran\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api_koran\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api_koran\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api_koran\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\api_koran\app\Controllers\Laporan.php(98): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+#8 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp\htdocs\api_koran\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\api_koran\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\api_koran\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-03 21:06:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'nama_koran LIKE "Tribun news"' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-11-01" and "2022-11-03"nama_koran LIKE "Tribun news"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-11-01" and "2022-11-03"nama_koran LIKE "Tribun news"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-11-01" and "2022-11-03"nama_koran LIKE "Tribun news"')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setoran`
+WHERE `tanggal` BETWEEN "2022-11-01" and "2022-11-03"nama_koran LIKE "Tribun news"', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Laporan.php(98): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Laporan->setoranExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

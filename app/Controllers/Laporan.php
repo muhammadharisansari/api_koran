@@ -83,6 +83,28 @@ class Laporan extends BaseController
 
         $dataKoran = $this->setoran->where('tanggal BETWEEN "' . date('Y-m-d', strtotime($start_date)) . '" and "' . date('Y-m-d', strtotime($end_date)) . '"')->findAll();
 
+        $arr = [];
+        $tot = [];
+        $jum = 0;
+
+        $getAllMitra = $this->model->findAll();
+
+        foreach ($getAllMitra as $key) {
+            array_push($arr, $key['koran']);
+        }
+
+        for ($i = 0; $i < sizeof($arr); $i++) {
+            $jum = $jum - $jum;
+            $getSet = $this->setoran->where('tanggal BETWEEN "' . date('Y-m-d', strtotime($start_date)) . '" and "' . date('Y-m-d', strtotime($end_date)) . '"&& nama_koran LIKE "' . $arr[$i] . '"')->findAll();
+
+            foreach ($getSet as $g) {
+                $jum = $jum + $g['jumlah'];
+            }
+            array_push($tot, $jum);
+        }
+
+        // dd($tot, $arr);
+
         $spreadsheet = new Spreadsheet();
 
         // tulis header/nama kolom 
@@ -92,8 +114,8 @@ class Laporan extends BaseController
             ->setCellValue('C1', 'Diperbarui')
             ->setCellValue('D1', 'Nama Koran')
             ->setCellValue('E1', 'Bulan')
-            ->setCellValue('F1', 'Tanggal')
-            ->setCellValue('G1', 'Jumlah');
+            ->setCellValue('F1', 'Tanggal transaksi')
+            ->setCellValue('G1', 'Jumlah pcs');
 
         $column = 2;
         $total = 0;
@@ -111,6 +133,11 @@ class Laporan extends BaseController
             $total = $total + $data['jumlah'];
             $column++;
             $no++;
+        }
+        // dd($getAllMitra);
+        for ($i = 0; $i < sizeof($arr); $i++) {
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('A' . $column . ':' . 'F' . $column)->setCellValue('A' . $column, $arr[$i])->setCellValue('G' . $column, $tot[$i]);
+            $column++;
         }
         $spreadsheet->setActiveSheetIndex(0)->mergeCells('A' . $column . ':' . 'F' . $column)->setCellValue('A' . $column, "Total");
         $spreadsheet->setActiveSheetIndex(0)->setCellValue('G' . $column, $total);
